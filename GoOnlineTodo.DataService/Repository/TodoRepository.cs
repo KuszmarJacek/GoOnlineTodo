@@ -41,7 +41,13 @@ namespace GoOnlineTodo.DataService.Repository
         {
             try
             {
-                return await _todoSet.FindAsync(id);
+                var result = await _todoSet.FindAsync(id);
+                if (result == null)
+                {
+                    return null;
+                }
+
+                return result;
             }
             catch (Exception ex)
             {

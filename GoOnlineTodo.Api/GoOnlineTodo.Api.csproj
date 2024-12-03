@@ -4,6 +4,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
+    <EnableSdkContainerDebugging>True</EnableSdkContainerDebugging>
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:8.0</ContainerBaseImage>
+    <UserSecretsId>b1208378-bcad-4245-bcd7-b6d6154bf563</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,6 +26,10 @@
   <ItemGroup>
     <ProjectReference Include="..\GoOnlineTodo.DataService\GoOnlineTodo.DataService.csproj" />
     <ProjectReference Include="..\GoOnlineTodo.Entities\GoOnlineTodo.Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ContainerPort Include="8081" />
   </ItemGroup>
 
 </Project>

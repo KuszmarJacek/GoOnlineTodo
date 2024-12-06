@@ -31,6 +31,7 @@ This is a list of requirements that were supposed to be met for this project:
 - [ ] performance tests
 
 ## How to run
+Provide your DB connection credentials in the ```appsettings.json``` file, then apply migrations (see considerations below) and after that you should be good to go.
 From within the GoOnlineTodo.Api directory run ```dotnet run``` and the app should start running in development mode.
 ## Considerations
 Being a multiproject solution, whenever migrations are to be applied remember to specify dependencies, for example: <br/>
